@@ -1,0 +1,65 @@
+#header {
+	width: 100%;
+	height: 87px;
+	text-align: center;
+
+	.title,
+	.sub-headers {
+		font-weight: 700;
+		font-size: 1.125rem;
+	}
+
+	.sub-headers {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+main {
+	height: 510px;
+	//overflow: hidden;
+
+	.links-container {
+		display: flex;
+		height: 100%;
+		flex-wrap: wrap;
+		margin: 0 4rem;
+
+		div {
+			height: 45px;
+			flex: 1 1 50%;
+		}
+	}
+}
+
+footer {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	margin: 15px 0;
+
+	img {
+		align-self: center;
+		width: 75px;
+	}
+
+	&.no-centre {
+		text-align: start;
+	}
+}
+
+.font-large {
+	font-size: 1.85rem
+}
+
+.font-medium {
+	font-size: 0.9rem;
+}
+
+.font-small {
+	font-size: 0.7rem
+}
+
+.font-smallest {
+	font-size: 0.6rem
+}
