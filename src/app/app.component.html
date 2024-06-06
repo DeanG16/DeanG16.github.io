@@ -12,7 +12,7 @@
 		</div>
 	</section>
 	<hr>
-	<main>
+	<main class="{{ handheld ? 'handheld' : 'desktop'}}">
 		<div class="links-container">
 			<ng-container *ngFor="let item of links">
 				<div>

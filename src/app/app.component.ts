@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout'
 
 @Component({
 	selector: 'app-root',
@@ -10,6 +11,14 @@ import { RouterOutlet } from '@angular/router';
 	styleUrl: './app.component.scss'
 })
 export class AppComponent {
+	public handheld: boolean = false;
+
+	constructor(private breakpointObserver: BreakpointObserver) {
+		this.breakpointObserver.observe([Breakpoints.HandsetPortrait]).subscribe(result => {
+			console.log("Match!")
+			this.handheld = result.matches ? true : false;
+		})
+	}
 	title = 'investment-site';
 
 	public links = [

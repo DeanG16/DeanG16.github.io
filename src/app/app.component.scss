@@ -16,21 +16,30 @@
 }
 
 main {
-	height: 510px;
-	//overflow: hidden;
+	&.handheld {
+		height: auto;
+	}
 
-	.links-container {
-		display: flex;
-		height: 100%;
-		flex-wrap: wrap;
-		margin: 0 4rem;
+	&.desktop {
+		height: 510px;
 
-		div {
-			height: 45px;
-			flex: 1 1 50%;
+
+		.links-container {
+			display: flex;
+			height: 100%;
+			flex-wrap: wrap;
+			margin: 0 4rem;
+
+			div {
+				height: 45px;
+				flex: 1 1 50%;
+			}
 		}
 	}
+
+
 }
+
 
 footer {
 	text-align: center;
